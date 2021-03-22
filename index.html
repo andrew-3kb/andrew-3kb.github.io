@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <meta charset="UTF-8">
@@ -10,8 +9,8 @@
     @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
     body {
-      background: #52a7ff;
-      color: white;
+      background: white;
+      color: black;
       font-family: 'Lora', serif;
       vertical-align: top;
       display: flex;
@@ -20,14 +19,20 @@
     }
 
     a {
-      color: white;
+      color: black;
+    }
+
+    .baseWrapper {
+      background: white;
+      margin: 20px;
+      padding: 20px;
+      z-index: 1;
     }
 
     .base {
       display: inline-block;
       max-width: 400px;
-      border-top: 5px solid white;
-      margin: 20px;
+      border-top: 5px solid black;
       padding: 10px;
       letter-spacing: 0.02em;
     }
@@ -47,14 +52,61 @@
       margin: 0;
       font-size: 0.9em;
       line-height: 1.5em;
-    } 
+    }
+
+    #background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+    }
   </style>
+
 </head>
 <body>
-  <div class="base">
-    <h1>Andrew Jackson</h1>
-    <p>Programmer / Manchester, UK</p>
-    <p>Multidisclipline programmer. Find me on <a href="https://github.com/andrew-d-jackson">Github</a>. Notable open source work includes <a href="https://github.com/andrew-d-jackson/Liga">Liga</a> and <a href="https://github.com/andrew-d-jackson/atom-clang-format">atom-clang-format</a>. Email andrew (at) lqdh (dot) net</p>
+  <canvas id="background" width="0" height="0"></canvas>
+  <div class="baseWrapper">
+    <div class="base">
+      <h1>Andrew Jackson</h1>
+      <p>Programmer / London, UK</p>
+      <p>Software Engineer. Find me on <a href="https://github.com/andrew-d-jackson">Github</a>. Notable open source work includes <a href="https://github.com/andrew-d-jackson/Liga">Liga</a> and <a href="https://github.com/andrew-d-jackson/atom-clang-format">atom-clang-format</a>. Currently work for <a href="https://trint.com/">Trint</a>. Email andrew (at) lqdh (dot) net</p>
+    </div>
   </div>
+    <script type="text/javascript">
+    const colors = ["#21f5ff", "#ffd921", "#ff21c5", "#000"];
+    const randomArrayValue = (arr) => arr[Math.floor(Math.random() * arr.length)];
+    const randomInt = (min, max) => min + Math.floor(Math.random() * (max - min));
+
+    const canvas = document.getElementById('background');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const ctx = canvas.getContext("2d");
+
+    const renderSize = Math.max(window.innerWidth, window.innerHeight) * 2;
+    const drawPattern = (color, gap, size, rotate) => {
+      ctx.save();
+      ctx.translate(renderSize/2, renderSize/2);
+      ctx.rotate(rotate);
+      ctx.translate(-(renderSize/2), -(renderSize/2));
+      ctx.fillStyle = color;
+      for (let x = 0; x < renderSize; x += gap) {
+        for (let y = 0; y < renderSize; y += gap) {
+          ctx.fillRect(x - window.innerWidth/2, y - window.innerHeight/2, size, size);
+        }
+      }
+      ctx.restore();
+    };
+
+    const size = randomInt(5, 20);
+    const gap = size + randomInt(2, 20);
+
+    for (let i = 0; i < randomInt(2, 4); i++) {
+      const color = randomArrayValue(colors);
+      const rotation = Math.random();
+      drawPattern(color, gap, size, rotation);
+    }
+  </script>
 </body>
 </html>
