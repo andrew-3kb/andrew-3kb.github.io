@@ -3,9 +3,19 @@
   <meta charset="UTF-8">
   <title>Andrew Jackson</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">  
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="stylesheet" href="/normalize.min.css">  
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+    @font-face {
+        font-family: 'HeaderFont';
+        src: url('HeaderFont.woff2') format('woff2'),
+            url('HeaderFont.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+
     @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
     body {
@@ -38,7 +48,8 @@
     }
 
     h1 {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'HeaderFont', sans-serif;
+      letter-spacing: -0.06rem;
       padding: 0;
       margin: 0;
       padding-top: 5px;
