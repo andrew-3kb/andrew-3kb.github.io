@@ -99,13 +99,13 @@
       ctx.save();
       ctx.translate(window.innerWidth/2, window.innerHeight/2);
       ctx.rotate(rotate);
-      ctx.translate(-(window.innerWidth/2), -(window.innerHeight/2));
       ctx.fillStyle = color;
       for (let x = 0; x < renderSize; x += gap) {
         for (let y = 0; y < renderSize; y += gap) {
-          ctx.fillRect(x, y, size, size);
+          ctx.fillRect(x - (renderSize/2), y - (renderSize/2), size, size);
         }
       }
+      ctx.translate(-(window.innerWidth/2), -(window.innerHeight/2));
       ctx.restore();
     };
 
