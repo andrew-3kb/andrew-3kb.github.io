@@ -97,13 +97,13 @@
     const renderSize = Math.max(window.innerWidth, window.innerHeight) * 2;
     const drawPattern = (color, gap, size, rotate) => {
       ctx.save();
-      ctx.translate(renderSize/2, renderSize/2);
+      ctx.translate(window.innerWidth/2, window.innerHeight/2);
       ctx.rotate(rotate);
-      ctx.translate(-(renderSize/2), -(renderSize/2));
+      ctx.translate(-(window.innerWidth/2), -(window.innerHeight/2));
       ctx.fillStyle = color;
       for (let x = 0; x < renderSize; x += gap) {
         for (let y = 0; y < renderSize; y += gap) {
-          ctx.fillRect(x - window.innerWidth/2, y - window.innerHeight/2, size, size);
+          ctx.fillRect(x, y, size, size);
         }
       }
       ctx.restore();
