@@ -86,7 +86,7 @@
 				function send_resize() {
 					var canvas = document.getElementById('canvas');
           const canvasSize = canvas.getBoundingClientRect()
-					e.web_window_size_changed(canvasSize.width, canvasSize.height);
+					e.web_window_size_changed(canvasSize.width, canvasSize.height, window.devicePixelRatio);
 				}
 
 				window.addEventListener('resize', function(event) {

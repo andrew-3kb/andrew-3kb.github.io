@@ -27,7 +27,7 @@ var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIR
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmp2hfkowg8.js
+// include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmplvcovdad.js
 
   Module['expectedDataFileDownloads'] ??= 0;
   Module['expectedDataFileDownloads']++;
@@ -160,25 +160,25 @@ Module['FS_createPath']("/assets", "textures", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/assets/.DS_Store", "start": 0, "end": 14340}, {"filename": "/assets/audio/.DS_Store", "start": 14340, "end": 20488}, {"filename": "/assets/audio/click.ogg", "start": 20488, "end": 25144}, {"filename": "/assets/audio/drop.ogg", "start": 25144, "end": 33348}, {"filename": "/assets/audio/pickup.ogg", "start": 33348, "end": 40792}, {"filename": "/assets/audio/place.ogg", "start": 40792, "end": 48152}, {"filename": "/assets/fonts/.DS_Store", "start": 48152, "end": 54300}, {"filename": "/assets/fonts/fredoka.ttf", "start": 54300, "end": 97800}, {"filename": "/assets/fonts/grandiflora.ttf", "start": 97800, "end": 2435744}, {"filename": "/assets/fonts/scope.ttf", "start": 2435744, "end": 2525592}, {"filename": "/assets/fortune-boards.bin", "start": 2525592, "end": 2532726}, {"filename": "/assets/shaders/balatro.fs.glsl", "start": 2532726, "end": 2535153}, {"filename": "/assets/shaders/balatro.vs.glsl", "start": 2535153, "end": 2535663}, {"filename": "/assets/shaders/hole.fs.glsl", "start": 2535663, "end": 2536978}, {"filename": "/assets/shaders/hole.old.fs.glsl", "start": 2536978, "end": 2538029}, {"filename": "/assets/shaders/hole.old.vs.glsl", "start": 2538029, "end": 2538514}, {"filename": "/assets/shaders/hole.vs.glsl", "start": 2538514, "end": 2538999}, {"filename": "/assets/shaders/vapour.fs.glsl", "start": 2538999, "end": 2545397}, {"filename": "/assets/shaders/vapour.vs.glsl", "start": 2545397, "end": 2545882}, {"filename": "/assets/textures/.DS_Store", "start": 2545882, "end": 2552030}, {"filename": "/assets/textures/cards.png", "start": 2552030, "end": 2623108}, {"filename": "/assets/textures/cards2.png", "start": 2623108, "end": 2953905}, {"filename": "/assets/textures/s.png", "start": 2953905, "end": 3254474}], "remote_package_size": 3254474});
+    loadPackage({"files": [{"filename": "/assets/.DS_Store", "start": 0, "end": 14340}, {"filename": "/assets/audio/.DS_Store", "start": 14340, "end": 20488}, {"filename": "/assets/audio/click.ogg", "start": 20488, "end": 25144}, {"filename": "/assets/audio/drop.ogg", "start": 25144, "end": 33348}, {"filename": "/assets/audio/pickup.ogg", "start": 33348, "end": 40792}, {"filename": "/assets/audio/place.ogg", "start": 40792, "end": 48152}, {"filename": "/assets/fonts/.DS_Store", "start": 48152, "end": 54300}, {"filename": "/assets/fonts/fredoka.ttf", "start": 54300, "end": 97800}, {"filename": "/assets/fonts/grandiflora.ttf", "start": 97800, "end": 2435744}, {"filename": "/assets/fonts/scope.ttf", "start": 2435744, "end": 2525592}, {"filename": "/assets/fortune-boards.bin", "start": 2525592, "end": 2532726}, {"filename": "/assets/shaders/balatro.fs.glsl", "start": 2532726, "end": 2535153}, {"filename": "/assets/shaders/balatro.vs.glsl", "start": 2535153, "end": 2535663}, {"filename": "/assets/shaders/hole.fs.glsl", "start": 2535663, "end": 2536978}, {"filename": "/assets/shaders/hole.old.fs.glsl", "start": 2536978, "end": 2538029}, {"filename": "/assets/shaders/hole.old.vs.glsl", "start": 2538029, "end": 2538514}, {"filename": "/assets/shaders/hole.vs.glsl", "start": 2538514, "end": 2538999}, {"filename": "/assets/shaders/vapour.fs.glsl", "start": 2538999, "end": 2545397}, {"filename": "/assets/shaders/vapour.vs.glsl", "start": 2545397, "end": 2545882}, {"filename": "/assets/textures/.DS_Store", "start": 2545882, "end": 2552030}, {"filename": "/assets/textures/cards.png", "start": 2552030, "end": 2623108}, {"filename": "/assets/textures/cards2.png", "start": 2623108, "end": 2960731}], "remote_package_size": 2960731});
 
   })();
 
-// end include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmp2hfkowg8.js
-// include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmp8qg02no1.js
+// end include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmplvcovdad.js
+// include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmphaidj_2_.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if ((typeof ENVIRONMENT_IS_WASM_WORKER != 'undefined' && ENVIRONMENT_IS_WASM_WORKER) || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD) || (typeof ENVIRONMENT_IS_AUDIO_WORKLET != 'undefined' && ENVIRONMENT_IS_AUDIO_WORKLET)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmp8qg02no1.js
-// include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmpweihrl35.js
+  // end include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmphaidj_2_.js
+// include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmpetoj_tuy.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmpweihrl35.js
+  // end include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmpetoj_tuy.js
 
 
 var arguments_ = [];
@@ -9756,8 +9756,8 @@ function assignWasmExports(wasmExports) {
   Module['_exported_force_reload'] = _exported_force_reload = createExportWrapper('exported_force_reload', 1);
   Module['_exported_force_restart'] = _exported_force_restart = createExportWrapper('exported_force_restart', 1);
   Module['_main_end'] = _main_end = createExportWrapper('main_end', 0);
-  Module['_exported_parent_window_size_changed'] = _exported_parent_window_size_changed = createExportWrapper('exported_parent_window_size_changed', 3);
-  Module['_web_window_size_changed'] = _web_window_size_changed = createExportWrapper('web_window_size_changed', 2);
+  Module['_exported_parent_window_size_changed'] = _exported_parent_window_size_changed = createExportWrapper('exported_parent_window_size_changed', 4);
+  Module['_web_window_size_changed'] = _web_window_size_changed = createExportWrapper('web_window_size_changed', 3);
   _malloc = createExportWrapper('malloc', 1);
   _free = createExportWrapper('free', 1);
   _fflush = createExportWrapper('fflush', 1);
