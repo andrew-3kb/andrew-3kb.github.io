@@ -27,7 +27,7 @@ var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIR
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmp238po7zf.js
+// include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmp_la3lk8l.js
 
   Module['expectedDataFileDownloads'] ??= 0;
   Module['expectedDataFileDownloads']++;
@@ -164,21 +164,21 @@ Module['FS_createPath']("/assets", "textures", true, true);
 
   })();
 
-// end include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmp238po7zf.js
-// include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmpwop18x81.js
+// end include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmp_la3lk8l.js
+// include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmpvtlxoloj.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if ((typeof ENVIRONMENT_IS_WASM_WORKER != 'undefined' && ENVIRONMENT_IS_WASM_WORKER) || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD) || (typeof ENVIRONMENT_IS_AUDIO_WORKLET != 'undefined' && ENVIRONMENT_IS_AUDIO_WORKLET)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmpwop18x81.js
-// include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmpj97xbm92.js
+  // end include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmpvtlxoloj.js
+// include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmpyb9sn51n.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmpj97xbm92.js
+  // end include: /var/folders/2x/b7sbnjnd1xz7w5lm_bw59qw00000gn/T/tmpyb9sn51n.js
 
 
 var arguments_ = [];
@@ -9144,6 +9144,13 @@ async function createWasm() {
   _pow.stub = true;
 
   /** @type {function(...*):?} */
+  function _time_now(
+  ) {
+  abort('missing function: time_now');
+  }
+  _time_now.stub = true;
+
+  /** @type {function(...*):?} */
   function _write(
   ) {
   abort('missing function: write');
@@ -9705,8 +9712,8 @@ var ASM_CONSTS = {
 var _exported_update = Module['_exported_update'] = makeInvalidEarlyAccess('_exported_update');
 var _exported_init_window = Module['_exported_init_window'] = makeInvalidEarlyAccess('_exported_init_window');
 var _default_context_ptr = Module['_default_context_ptr'] = makeInvalidEarlyAccess('_default_context_ptr');
-var _main_start = Module['_main_start'] = makeInvalidEarlyAccess('_main_start');
 var _exported_init = Module['_exported_init'] = makeInvalidEarlyAccess('_exported_init');
+var _main_start = Module['_main_start'] = makeInvalidEarlyAccess('_main_start');
 var _exported_should_run = Module['_exported_should_run'] = makeInvalidEarlyAccess('_exported_should_run');
 var _exported_shutdown = Module['_exported_shutdown'] = makeInvalidEarlyAccess('_exported_shutdown');
 var __start = Module['__start'] = makeInvalidEarlyAccess('__start');
@@ -9715,11 +9722,11 @@ var _exported_get_memory = Module['_exported_get_memory'] = makeInvalidEarlyAcce
 var _exported_memory_size = Module['_exported_memory_size'] = makeInvalidEarlyAccess('_exported_memory_size');
 var _exported_hot_reloaded = Module['_exported_hot_reloaded'] = makeInvalidEarlyAccess('_exported_hot_reloaded');
 var __end = Module['__end'] = makeInvalidEarlyAccess('__end');
-var _main_update = Module['_main_update'] = makeInvalidEarlyAccess('_main_update');
 var _exported_force_reload = Module['_exported_force_reload'] = makeInvalidEarlyAccess('_exported_force_reload');
 var _exported_force_restart = Module['_exported_force_restart'] = makeInvalidEarlyAccess('_exported_force_restart');
-var _main_end = Module['_main_end'] = makeInvalidEarlyAccess('_main_end');
 var _exported_parent_window_size_changed = Module['_exported_parent_window_size_changed'] = makeInvalidEarlyAccess('_exported_parent_window_size_changed');
+var _main_update = Module['_main_update'] = makeInvalidEarlyAccess('_main_update');
+var _main_end = Module['_main_end'] = makeInvalidEarlyAccess('_main_end');
 var _web_window_size_changed = Module['_web_window_size_changed'] = makeInvalidEarlyAccess('_web_window_size_changed');
 var _malloc = makeInvalidEarlyAccess('_malloc');
 var _free = makeInvalidEarlyAccess('_free');
@@ -9742,8 +9749,8 @@ function assignWasmExports(wasmExports) {
   Module['_exported_update'] = _exported_update = createExportWrapper('exported_update', 1);
   Module['_exported_init_window'] = _exported_init_window = createExportWrapper('exported_init_window', 1);
   Module['_default_context_ptr'] = _default_context_ptr = createExportWrapper('default_context_ptr', 0);
-  Module['_main_start'] = _main_start = createExportWrapper('main_start', 0);
   Module['_exported_init'] = _exported_init = createExportWrapper('exported_init', 1);
+  Module['_main_start'] = _main_start = createExportWrapper('main_start', 0);
   Module['_exported_should_run'] = _exported_should_run = createExportWrapper('exported_should_run', 1);
   Module['_exported_shutdown'] = _exported_shutdown = createExportWrapper('exported_shutdown', 1);
   Module['__start'] = __start = createExportWrapper('_start', 0);
@@ -9752,11 +9759,11 @@ function assignWasmExports(wasmExports) {
   Module['_exported_memory_size'] = _exported_memory_size = createExportWrapper('exported_memory_size', 1);
   Module['_exported_hot_reloaded'] = _exported_hot_reloaded = createExportWrapper('exported_hot_reloaded', 2);
   Module['__end'] = __end = createExportWrapper('_end', 0);
-  Module['_main_update'] = _main_update = createExportWrapper('main_update', 0);
   Module['_exported_force_reload'] = _exported_force_reload = createExportWrapper('exported_force_reload', 1);
   Module['_exported_force_restart'] = _exported_force_restart = createExportWrapper('exported_force_restart', 1);
-  Module['_main_end'] = _main_end = createExportWrapper('main_end', 0);
   Module['_exported_parent_window_size_changed'] = _exported_parent_window_size_changed = createExportWrapper('exported_parent_window_size_changed', 4);
+  Module['_main_update'] = _main_update = createExportWrapper('main_update', 0);
+  Module['_main_end'] = _main_end = createExportWrapper('main_end', 0);
   Module['_web_window_size_changed'] = _web_window_size_changed = createExportWrapper('web_window_size_changed', 3);
   _malloc = createExportWrapper('malloc', 1);
   _free = createExportWrapper('free', 1);
@@ -10336,6 +10343,8 @@ var wasmImports = {
   glfwWindowHint: _glfwWindowHint,
   /** @export */
   pow: _pow,
+  /** @export */
+  time_now: _time_now,
   /** @export */
   write: _write
 };
