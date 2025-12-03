@@ -1,0 +1,119 @@
+[
+  {
+    "year": "2024",
+    "projects": [
+      {
+        "name": "simple-concurrency",
+        "url": "https://github.com/andrew-3kb/simple-concurrency",
+        "desc": "Simple concurrency and queues for typescript"
+      },
+      {
+        "name": "simple-failure",
+        "url": "https://github.com/andrew-3kb/simple-failure",
+        "desc": "Simple error handling for typescript"
+      },
+      {
+        "name": "Apollo & next.js suspenseless streaming",
+        "url": "https://github.com/andrew-3kb/apollo-next-suspenseless-streaming",
+        "desc": "Experimental proof of concept that streams graphql requests without the need for <Suspense>"
+      }
+    ]
+  },
+   {
+    "year": "2021",
+    "projects": [
+      {
+        "name": "Mongo or Asbestos",
+        "url": "https://mongoorasbestos.com/",
+        "desc": "Buzzfeed style quiz to vent frustration that I worked with a certain db at the time"
+      }
+    ]
+  },
+  {
+    "year": "2020",
+    "projects": [
+      {
+        "name": "CUBECUBECUBECUBECUBECUBE",
+        "url": "https://github.com/andrew-3kb/CUBECUBECUBECUBECUBECUBE",
+        "desc": "Rust/OpenGL graphics toy with deferred shading and voxel rendering"
+      }
+    ]
+  },
+   {
+    "year": "2015",
+    "projects": [
+      {
+        "name": "Pinkput",
+        "url": "https://github.com/andrew-3kb/pinkput",
+        "desc": "Chrome extension for pinboard.in, fork of the popular pinput"
+      }
+    ]
+  },
+
+  {
+    "year": "2014",
+    "projects": [
+      {
+        "name": "Liga",
+        "url": "https://github.com/andrew-3kb/Xigua",
+        "desc": "LLVM based compiler for Xigua, my functional programming language"
+      },
+      {
+        "name": "Atom Clang Format",
+        "url": "https://github.com/andrew-3kb/Coulor",
+        "desc": "The #1 Atom (RIP) plugin to format your C/C++ files with clang-format"
+      },
+      {
+        "name": "Love Achievements",
+        "url": "https://github.com/andrew-3kb/LoveAchievements",
+        "desc": "An achievement system for Love2D"
+      }
+    ]
+  },
+  {
+    "year": "2013",
+    "projects": [
+      {
+        "name": "Love Achievements",
+        "url": "https://github.com/andrew-3kb/LoveAchievements",
+        "desc": "An achievement system for Love2D"
+      },
+      {
+        "name": "Xigua",
+        "url": "https://github.com/andrew-3kb/Xigua",
+        "desc": "An interpreted functional programming language in the style of lisp"
+      },
+      {
+        "name": "Coulor",
+        "url": "https://github.com/andrew-3kb/Coulor",
+        "desc": "Silly programming language were programs are bitmaps and pixels are code"
+      }
+    ]
+  },
+  {
+    "year": "2012",
+    "projects": [
+      {
+        "name": "Podcast Reader",
+        "url": "https://github.com/andrew-3kb/PodcastReader",
+        "desc": "Chrome extension for better podcast support for Google Reader (RIP)"
+      },
+      {
+        "name": "Love Achievements",
+        "url": "https://github.com/andrew-3kb/LoveAchievements",
+        "desc": "An achievement system for Love2D"
+      }
+    ]
+  },
+ {
+    "year": "2010",
+    "projects": [
+      {
+        "name": "KALM",
+        "url": "https://www.youtube.com/watch?v=RWCwXSM78Kk",
+        "desc": "XNA platformer game that was published on Xbox Live Indie Games"
+      }
+    ]
+  }
+
+]
