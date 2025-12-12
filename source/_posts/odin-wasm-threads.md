@@ -86,14 +86,14 @@ Now we have got the imports in each thread, we need to make sure they are return
 ```
 function getWasmImports() {
   assignWasmImports();
-  var imports = {
+  return {
     ...odinImports,
     "env": wasmImports,
     "wasi_snapshot_preview1": wasmImports
   };
-  return imports;
 }
 ``` 
+
 We also need to make sure the thread has finished importing `odin.js` by the time `getWasmImports()` gets called, so we need to gate it behind the promise we made. The most convenient place I've found to do this is in the two places where the code looks like 
 ```
 createWasm();
@@ -107,6 +107,20 @@ waitForOdinImports.then(() => {
 	run();
 });
 ```
+
+and in the place where
+
+```
+var result = await instantiateAsync(wasmBinary, wasmBinaryFile, info);
+```
+
+we update it to be
+
+```
+await waitForOdinImports;
+var result = await instantiateAsync(wasmBinary, wasmBinaryFile, info);
+```
+
 and that's it. However manually editing the index.js file every time is tedious, so you might want to automate it, see the example repo for a python script that does this.
 
 ### CORS and Hosting
